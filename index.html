@@ -1,47 +1,166 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>LASME UFSJ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      line-height: 1.6;
-    }
-    a.button {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #1f2937;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 20px;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LASME — Laboratório de Sistemas Mecânicos (UFSJ)</title>
+  <meta name="description" content="Página institucional do LASME (UFSJ): ensino, pesquisa e desenvolvimento em sistemas mecânicos, mecanismos e transmissões." />
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-<h1>Engrenarium</h1>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <!-- Se você tiver um logo, descomente a linha abaixo e coloque o arquivo em /assets/logo-lasme.svg -->
+        <img class="logo" src="./assets/logo.png" alt="LASME" />
+        <div class="brand-text">
+          <p class="kicker">Universidade Federal de São João del-Rei — UFSJ</p>
+          <h1>LASME</h1>
+          <p class="subtitle">Laboratório de Sistemas Mecânicos</p>
+        </div>
+      </div>
 
-<p>
-O <strong>Engrenarium</strong> é um laboratório virtual dedicado ao
-estudo, visualização e simulação de transmissões por engrenagens planetárias,
-voltado para ensino, pesquisa e desenvolvimento em engenharia mecânica.
-</p>
-  
-<p>
-<strong>Engrenarium</strong> is a virtual laboratory dedicated to the study,
-visualization, and simulation of planetary gear transmissions, aimed at education,
-research, and development in mechanical engineering.
-</p>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#atuacao">Atuação</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-  
-<a class="button" href="https://barbudania.github.io/engrenarium/">
-Abrir Engrenarium
-</a>
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2>Ensino, pesquisa e desenvolvimento em sistemas mecânicos</h2>
+          <p>
+            O LASME é um laboratório vinculado ao Departamento de Engenharia Mecânica da UFSJ, com foco em
+            mecanismos, elementos de máquinas, transmissões e ferramentas computacionais para apoio didático e análise.
+          </p>
+          <div class="cta">
+            <a class="button" href="#projetos">Ver projetos</a>
+            <a class="button ghost" href="https://github.com/Barbudenge" target="_blank" rel="noopener">GitHub do laboratório</a>
+          </div>
+        </div>
 
+        <div class="card highlight">
+          <h3>Destaque</h3>
+          <p class="muted">Engrenarium — simulador interativo de engrenagens planetárias</p>
+          <a class="button small" href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener">
+            Abrir Engrenarium
+          </a>
+          <a class="link" href="https://github.com/Barbudenge/engrenarium" target="_blank" rel="noopener">
+            Repositório do Engrenarium
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2>Sobre o laboratório</h2>
+        <p>
+          O LASME desenvolve atividades de ensino e pesquisa em sistemas mecânicos, incluindo modelagem e simulação,
+          desenvolvimento de ferramentas didáticas e análise de mecanismos e transmissões. O laboratório também mantém
+          projetos de software e materiais de apoio para disciplinas de engenharia mecânica.
+        </p>
+      </div>
+    </section>
+
+    <section id="atuacao" class="section alt">
+      <div class="container">
+        <h2>Linhas de atuação</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Mecanismos e cinemática</h3>
+            <p class="muted">
+              Análise e síntese de mecanismos, relações de movimento e configurações de sistemas.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Transmissões e engrenagens</h3>
+            <p class="muted">
+              Sistemas planetários e combinações de trens de engrenagens com foco didático e de simulação.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Ferramentas computacionais</h3>
+            <p class="muted">
+              Aplicações web e utilitários para visualização, documentação e apoio ao ensino.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2>Projetos</h2>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Engrenarium</h3>
+            <p class="muted">
+              Ferramenta web interativa para modelagem e visualização de engrenagens planetárias, com foco em ensino e análise.
+            </p>
+            <div class="actions">
+              <a class="button small" href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener">Abrir</a>
+              <a class="button small ghost" href="https://github.com/Barbudenge/engrenarium" target="_blank" rel="noopener">Código</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Repositório institucional</h3>
+            <p class="muted">
+              Esta página é mantida no repositório <strong>LasmeUFSJ</strong> e pode concentrar links, materiais e projetos do laboratório.
+            </p>
+            <div class="actions">
+              <a class="button small ghost" href="https://github.com/Barbudenge/LasmeUFSJ" target="_blank" rel="noopener">Ver repositório</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          Observação: você pode acrescentar aqui links para publicações, projetos de iniciação científica e materiais didáticos conforme forem sendo organizados.
+        </p>
+      </div>
+    </section>
+
+    <section id="contato" class="section alt">
+      <div class="container">
+        <h2>Contato e vinculação</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Instituição</h3>
+            <p class="muted">
+              Universidade Federal de São João del-Rei — UFSJ<br />
+              Departamento de Engenharia Mecânica
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Links</h3>
+            <ul class="list">
+              <li><a href="https://barbudenge.github.io/LasmeUFSJ/" target="_blank" rel="noopener">Página do LASME</a></li>
+              <li><a href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener">Engrenarium</a></li>
+              <li><a href="https://github.com/Barbudenge" target="_blank" rel="noopener">Organização no GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p class="muted">LASME — UFSJ • Página mantida via GitHub Pages</p>
+        </footer>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
