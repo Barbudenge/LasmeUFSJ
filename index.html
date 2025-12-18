@@ -175,85 +175,145 @@
     </section>
   </main>
 
-  <script>
-    const I18N = {
-      pt: {
-        skip: "Ir para o conteúdo",
-        kicker: "Universidade Federal de São João del-Rei — UFSJ",
-        subtitle: "Laboratório de Sistemas Mecânicos",
-        nav_about: "Sobre",
-        nav_focus: "Atuação",
-        nav_projects: "Projetos",
-        nav_contact: "Contato",
+<script>
+  const I18N = {
+    pt: {
+      skip: "Ir para o conteúdo",
+      kicker: "Universidade Federal de São João del-Rei — UFSJ",
+      subtitle: "Laboratório de Sistemas Mecânicos",
+      nav_about: "Sobre",
+      nav_focus: "Atuação",
+      nav_projects: "Projetos",
+      nav_contact: "Contato",
 
-        hero_title: "Ensino, pesquisa e desenvolvimento em sistemas mecânicos",
-        hero_text: "O LASME é um laboratório vinculado ao Departamento de Engenharia Mecânica da UFSJ, com foco em mecanismos, elementos de máquinas, transmissões e ferramentas computacionais para apoio didático e análise.",
-        cta_projects: "Ver projetos",
-        cta_github: "GitHub do laboratório",
+      hero_title: "Ensino, pesquisa e desenvolvimento em sistemas mecânicos",
+      hero_text: "O LASME é um laboratório vinculado ao Departamento de Engenharia Mecânica da UFSJ, com foco em mecanismos, elementos de máquinas, transmissões e ferramentas computacionais para apoio didático e análise.",
+      cta_projects: "Ver projetos",
+      cta_github: "GitHub do laboratório",
 
-        highlight_title: "Destaque",
-        highlight_text: "Engrenarium — simulador interativo de engrenagens planetárias",
-        highlight_open: "Abrir Engrenarium",
-        highlight_repo: "Repositório do Engrenarium",
+      highlight_title: "Destaque",
+      highlight_text: "Engrenarium — simulador interativo de engrenagens planetárias",
+      highlight_open: "Abrir Engrenarium",
+      highlight_repo: "Repositório do Engrenarium",
 
-        about_title: "Sobre o laboratório",
-        about_text: "O LASME desenvolve atividades de ensino e pesquisa em sistemas mecânicos, incluindo modelagem e simulação, desenvolvimento de ferramentas didáticas e análise de mecanismos e transmissões. O laboratório também mantém projetos de software e materiais de apoio para disciplinas de engenharia mecânica.",
+      about_title: "Sobre o laboratório",
+      about_text: "O LASME desenvolve atividades de ensino e pesquisa em sistemas mecânicos, incluindo modelagem e simulação, desenvolvimento de ferramentas didáticas e análise de mecanismos e transmissões. O laboratório também mantém projetos de software e materiais de apoio para disciplinas de engenharia mecânica.",
 
-        focus_title: "Linhas de atuação",
-        focus_1_title: "Mecanismos e cinemática",
-        focus_1_text: "Análise e síntese de mecanismos, relações de movimento e configurações de sistemas.",
-        focus_2_title: "Transmissões e engrenagens",
-        focus_2_text: "Sistemas planetários e combinações de trens de engrenagens com foco didático e de simulação.",
-        focus_3_title: "Ferramentas computacionais",
-        focus_3_text: "Aplicações web e utilitários para visualização, documentação e apoio ao ensino.",
+      focus_title: "Linhas de atuação",
+      focus_1_title: "Mecanismos e cinemática",
+      focus_1_text: "Análise e síntese de mecanismos, relações de movimento e configurações de sistemas.",
+      focus_2_title: "Transmissões e engrenagens",
+      focus_2_text: "Sistemas planetários e combinações de trens de engrenagens com foco didático e de simulação.",
+      focus_3_title: "Ferramentas computacionais",
+      focus_3_text: "Aplicações web e utilitários para visualização, documentação e apoio ao ensino.",
 
-        projects_title: "Projetos",
-        engrenarium_text: "Ferramenta web interativa para modelagem e visualização de engrenagens planetárias, com foco em ensino e análise.",
-        open: "Abrir",
-        code: "Código",
-        repo_title: "Repositório institucional",
-        repo_text: "Esta página é mantida no repositório LasmeUFSJ e pode concentrar links, materiais e projetos do laboratório.",
-        view_repo: "Ver repositório",
-        note: "Observação: você pode acrescentar aqui links para publicações, projetos de iniciação científica e materiais didáticos conforme forem sendo organizados.",
+      projects_title: "Projetos",
+      engrenarium_text: "Ferramenta web interativa para modelagem e visualização de engrenagens planetárias, com foco em ensino e análise.",
+      open: "Abrir",
+      code: "Código",
+      repo_title: "Repositório institucional",
+      repo_text: "Esta página é mantida no repositório LasmeUFSJ e pode concentrar links, materiais e projetos do laboratório.",
+      view_repo: "Ver repositório",
+      note: "Observação: você pode acrescentar aqui links para publicações, projetos de iniciação científica e materiais didáticos conforme forem sendo organizados.",
 
-        contact_title: "Contato e vinculação",
-        inst_title: "Instituição",
-        inst_line1: "Universidade Federal de São João del-Rei — UFSJ",
-        inst_line2: "Departamento de Engenharia Mecânica",
-        links_title: "Links",
-        link_lasme: "Página do LASME",
-        link_org: "Organização no GitHub",
-        footer: "LASME — UFSJ • Página mantida via GitHub Pages"
-      },
-      en: {
-        skip: "Skip to content",
-        kicker: "Federal University of São João del-Rei — UFSJ",
-        subtitle: "Laboratory of Mechanical Systems",
-        nav_about: "About",
-        nav_focus: "Focus",
-        nav_projects: "Projects",
-        nav_contact: "Contact",
+      contact_title: "Contato e vinculação",
+      inst_title: "Instituição",
+      inst_line1: "Universidade Federal de São João del-Rei — UFSJ",
+      inst_line2: "Departamento de Engenharia Mecânica",
+      links_title: "Links",
+      link_lasme: "Página do LASME",
+      link_org: "Organização no GitHub",
+      footer: "LASME — UFSJ • Página mantida via GitHub Pages"
+    },
 
-        hero_title: "Teaching, research, and development in mechanical systems",
-        hero_text: "LASME is a laboratory linked to UFSJ’s Department of Mechanical Engineering, focused on mechanisms, machine elements, transmissions, and computational tools to support teaching and analysis.",
-        cta_projects: "View projects",
-        cta_github: "Laboratory GitHub",
+    en: {
+      skip: "Skip to content",
+      kicker: "Federal University of São João del-Rei — UFSJ",
+      subtitle: "Laboratory of Mechanical Systems",
+      nav_about: "About",
+      nav_focus: "Focus",
+      nav_projects: "Projects",
+      nav_contact: "Contact",
 
-        highlight_title: "Featured",
-        highlight_text: "Engrenarium — interactive planetary gear simulator",
-        highlight_open: "Open Engrenarium",
-        highlight_repo: "Engrenarium repository",
+      hero_title: "Teaching, research, and development in mechanical systems",
+      hero_text: "LASME is a laboratory linked to UFSJ’s Department of Mechanical Engineering, focused on mechanisms, machine elements, transmissions, and computational tools to support teaching and analysis.",
+      cta_projects: "View projects",
+      cta_github: "Laboratory GitHub",
 
-        about_title: "About the laboratory",
-        about_text: "LASME carries out teaching and research activities in mechanical systems, including modeling and simulation, development of didactic tools, and analysis of mechanisms and transmissions. The laboratory also maintains software projects and supporting materials for mechanical engineering courses.",
+      highlight_title: "Featured",
+      highlight_text: "Engrenarium — interactive planetary gear simulator",
+      highlight_open: "Open Engrenarium",
+      highlight_repo: "Engrenarium repository",
 
-        focus_title: "Research and development focus",
-        focus_1_title: "Mechanisms and kinematics",
-        focus_1_text: "Analysis and synthesis of mechanisms, motion relationships, and system configurations.",
-        focus_2_title: "Transmissions and gears",
-        focus_2_text: "Planetary systems and gear train combinations with didactic and simulation-oriented emphasis.",
-        focus_3_title: "Computational tools",
-        focus_3_text: "Web applications and utilities for visualization, documentation, and teaching support.",
+      about_title: "About the laboratory",
+      about_text: "LASME carries out teaching and research activities in mechanical systems, including modeling and simulation, development of didactic tools, and analysis of mechanisms and transmissions. The laboratory also maintains software projects and supporting materials for mechanical engineering courses.",
 
-        projects_title: "Projects",
-        engrenarium_text: "Interactive web tool for modeling and visualization of planetary gears, focused on teaching and analysis_
+      focus_title: "Research and development focus",
+      focus_1_title: "Mechanisms and kinematics",
+      focus_1_text: "Analysis and synthesis of mechanisms, motion relationships, and system configurations.",
+      focus_2_title: "Transmissions and gears",
+      focus_2_text: "Planetary systems and gear train combinations with a didactic and simulation-oriented emphasis.",
+      focus_3_title: "Computational tools",
+      focus_3_text: "Web applications and utilities for visualization, documentation, and teaching support.",
+
+      projects_title: "Projects",
+      engrenarium_text: "Interactive web tool for modeling and visualization of planetary gears, focused on teaching and analysis.",
+      open: "Open",
+      code: "Code",
+      repo_title: "Institutional repository",
+      repo_text: "This page is maintained in the LasmeUFSJ repository and can centralize laboratory links, materials, and projects.",
+      view_repo: "View repository",
+      note: "Note: you may add links to publications, undergraduate research projects, and teaching materials as they are organized.",
+
+      contact_title: "Contact and affiliation",
+      inst_title: "Institution",
+      inst_line1: "Federal University of São João del-Rei — UFSJ",
+      inst_line2: "Department of Mechanical Engineering",
+      links_title: "Links",
+      link_lasme: "LASME page",
+      link_org: "GitHub organization",
+      footer: "LASME — UFSJ • Published via GitHub Pages"
+    }
+  };
+
+  const root = document.documentElement;
+
+  function applyLang(lang) {
+    const dict = I18N[lang] || I18N.pt;
+    root.lang = (lang === "en") ? "en" : "pt-BR";
+    localStorage.setItem("lasme_lang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (key && dict[key]) el.textContent = dict[key];
+    });
+
+    document.querySelectorAll("button[data-lang]").forEach(btn => {
+      const on = btn.dataset.lang === lang;
+      btn.classList.toggle("active", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  function applyTheme(theme) {
+    const t = (theme === "light") ? "light" : "dark";
+    root.setAttribute("data-theme", t);
+    localStorage.setItem("lasme_theme", t);
+
+    document.querySelectorAll("button[data-theme]").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.theme === t);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("button[data-lang]").forEach(btn => {
+      btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+    });
+    document.querySelectorAll("button[data-theme]").forEach(btn => {
+      btn.addEventListener("click", () => applyTheme(btn.dataset.theme));
+    });
+
+    applyLang(localStorage.getItem("lasme_lang") || "pt");
+    applyTheme(localStorage.getItem("lasme_theme") || "dark");
+  });
+</script>
