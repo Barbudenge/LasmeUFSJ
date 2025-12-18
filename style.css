@@ -244,7 +244,23 @@ h3{
 
 .card.highlight{
   background: linear-gradient(180deg, color-mix(in srgb, var(--panel-2) 90%, transparent), var(--panel));
+  display: flex;
+  gap: 14px;
+  align-items: center;
 }
+
+.highlight-logo{
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  background: var(--chip);
+  border: 1px solid var(--chip-border);
+  padding: 8px;
+  object-fit: contain;
+}
+
+.highlight-body{ min-width: 0; }
 
 .muted{ color: var(--muted); }
 
