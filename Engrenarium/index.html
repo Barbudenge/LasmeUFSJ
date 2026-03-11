@@ -98,31 +98,27 @@
 
         <div class="screenshot-grid">
           <figure class="card screenshot-card">
-            <div class="screenshot-frame">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%201.png" data-caption-key="screenshots_caption_1">
               <img src="./Figs/Fig%201.png" alt="Engrenarium screenshot 1" loading="lazy" decoding="async" />
-            </div>
-            <figcaption class="note" data-i18n="screenshots_caption_1">Screenshot 1</figcaption>
+            </button>
           </figure>
 
           <figure class="card screenshot-card">
-            <div class="screenshot-frame">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%202.png" data-caption-key="screenshots_caption_2">
               <img src="./Figs/Fig%202.png" alt="Engrenarium screenshot 2" loading="lazy" decoding="async" />
-            </div>
-            <figcaption class="note" data-i18n="screenshots_caption_2">Screenshot 2</figcaption>
+            </button>
           </figure>
 
           <figure class="card screenshot-card">
-            <div class="screenshot-frame">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%203.png" data-caption-key="screenshots_caption_3">
               <img src="./Figs/Fig%203.png" alt="Engrenarium screenshot 3" loading="lazy" decoding="async" />
-            </div>
-            <figcaption class="note" data-i18n="screenshots_caption_3">Screenshot 3</figcaption>
+            </button>
           </figure>
 
           <figure class="card screenshot-card">
-            <div class="screenshot-frame">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%204.png" data-caption-key="screenshots_caption_4">
               <img src="./Figs/Fig%204.png" alt="Engrenarium screenshot 4" loading="lazy" decoding="async" />
-            </div>
-            <figcaption class="note" data-i18n="screenshots_caption_4">Screenshot 4</figcaption>
+            </button>
           </figure>
         </div>
       </div>
@@ -157,7 +153,6 @@
         <div class="pricing-grid">
           <article class="card price-card">
             <div class="price-head">
-              <div class="price-radio" aria-hidden="true"></div>
               <p class="price-kicker" data-i18n="pricing_1_title">Individual</p>
               <p class="price-value">US$ 50,00</p>
             </div>
@@ -168,7 +163,6 @@
 
           <article class="card price-card">
             <div class="price-head">
-              <div class="price-radio" aria-hidden="true"></div>
               <p class="price-kicker" data-i18n="pricing_2_title">Institutional - 5 computers</p>
               <p class="price-value">US$ 225,00</p>
             </div>
@@ -179,7 +173,6 @@
 
           <article class="card price-card">
             <div class="price-head">
-              <div class="price-radio" aria-hidden="true"></div>
               <p class="price-kicker" data-i18n="pricing_3_title">Institutional - 10 computers</p>
               <p class="price-value">US$ 400,00</p>
             </div>
@@ -190,7 +183,6 @@
 
           <article class="card price-card">
             <div class="price-head">
-              <div class="price-radio" aria-hidden="true"></div>
               <p class="price-kicker" data-i18n="pricing_4_title">Institutional - 25 computers</p>
               <p class="price-value">US$ 800,00</p>
             </div>
@@ -201,7 +193,6 @@
 
           <article class="card price-card">
             <div class="price-head">
-              <div class="price-radio" aria-hidden="true"></div>
               <p class="price-kicker" data-i18n="pricing_5_title">Institutional - 50 computers</p>
               <p class="price-value">US$ 1.250,00</p>
             </div>
@@ -284,6 +275,15 @@
     </section>
   </main>
 
+  <div class="lightbox" hidden aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot preview" data-i18n-aria-label="lightbox_label">
+      <button class="lightbox-close" type="button" aria-label="Close preview" data-i18n-aria-label="lightbox_close">×</button>
+      <img class="lightbox-image" alt="" />
+      <p class="lightbox-caption muted"></p>
+    </div>
+  </div>
+
   <script>
     const I18N = {
       pt: {
@@ -322,6 +322,8 @@
         screenshots_caption_2: "Screenshot 2",
         screenshots_caption_3: "Screenshot 3",
         screenshots_caption_4: "Screenshot 4",
+        lightbox_label: "Visualização ampliada da imagem",
+        lightbox_close: "Fechar visualização",
         pricing_eyebrow: "Licenciamento",
         pricing_title: "Licenças e preços",
         pricing_intro: "O Engrenarium está disponível nas versões Free e Pro. A versão Free cobre o uso essencial, enquanto a versão Pro adiciona recursos avançados, opções mais amplas de implantação e planos de licença para usuários individuais e instituições.",
@@ -401,6 +403,8 @@
         screenshots_caption_2: "Screenshot 2",
         screenshots_caption_3: "Screenshot 3",
         screenshots_caption_4: "Screenshot 4",
+        lightbox_label: "Expanded image preview",
+        lightbox_close: "Close preview",
         pricing_eyebrow: "Licensing",
         pricing_title: "Licenses and pricing",
         pricing_intro: "Engrenarium is available in Free and Pro versions. The Free version covers essential usage, while the Pro version adds advanced capabilities, broader deployment options, and licensing plans for individuals and institutions.",
@@ -449,9 +453,11 @@
     const root = document.documentElement;
     const LANG_STORAGE_KEY = "lasme_lang_v2";
     const THEME_STORAGE_KEY = "lasme_theme";
+    let currentLang = "en";
 
     function applyLang(lang) {
       const dict = I18N[lang] || I18N.en;
+      currentLang = lang;
       root.lang = (lang === "en") ? "en" : "pt-BR";
       localStorage.setItem(LANG_STORAGE_KEY, lang);
 
@@ -490,6 +496,14 @@
         btn.classList.toggle("active", on);
         btn.setAttribute("aria-pressed", on ? "true" : "false");
       });
+
+      const lightbox = document.querySelector(".lightbox");
+      if (lightbox && !lightbox.hidden) {
+        const captionKey = lightbox.dataset.captionKey;
+        if (captionKey && dict[captionKey]) {
+          lightbox.querySelector(".lightbox-caption").textContent = dict[captionKey];
+        }
+      }
     }
 
     function applyTheme(theme) {
@@ -503,6 +517,42 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.querySelector(".lightbox");
+      const lightboxImage = lightbox.querySelector(".lightbox-image");
+      const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+      const closeLightbox = () => {
+        lightbox.hidden = true;
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.removeAttribute("src");
+        lightboxImage.alt = "";
+        lightbox.dataset.captionKey = "";
+        document.body.classList.remove("lightbox-open");
+      };
+
+      document.querySelectorAll("[data-screenshot]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const src = btn.getAttribute("data-screenshot");
+          const img = btn.querySelector("img");
+          const captionKey = btn.getAttribute("data-caption-key");
+          const dict = I18N[currentLang] || I18N.en;
+          lightboxImage.src = src;
+          lightboxImage.alt = img ? img.alt : "";
+          lightboxCaption.textContent = (captionKey && dict[captionKey]) ? dict[captionKey] : "";
+          lightbox.dataset.captionKey = captionKey || "";
+          lightbox.hidden = false;
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("lightbox-open");
+        });
+      });
+
+      lightbox.querySelectorAll("[data-lightbox-close], .lightbox-close").forEach(el => {
+        el.addEventListener("click", closeLightbox);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+      });
+
       document.querySelectorAll("button[data-lang]").forEach(btn => {
         btn.addEventListener("click", () => applyLang(btn.dataset.lang));
       });
