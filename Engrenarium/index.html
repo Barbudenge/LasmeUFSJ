@@ -29,11 +29,10 @@
 
       <nav class="nav" aria-label="Navigation" data-i18n-aria-label="nav_label">
         <a href="../" data-i18n="nav_home">Home</a>
+        <a href="#download" data-i18n="nav_download">Download</a>
         <a href="#sobre" data-i18n="nav_about">About the project</a>
         <a href="#screenshots" data-i18n="nav_screenshots">Screenshots</a>
         <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
-        <a href="#aplicacoes" data-i18n="nav_applications">Applications</a>
-        <a href="#proximos-passos" data-i18n="nav_next">Next steps</a>
       </nav>
 
       <div class="toolbar" aria-label="Controls" data-i18n-aria-label="controls_label">
@@ -53,25 +52,37 @@
   <main id="conteudo">
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <h2 data-i18n="hero_title">Engrenarium</h2>
-          <p data-i18n="hero_text">
-            Engrenarium is a LASME project focused on the simulation and visualization of planetary gear systems in a web environment.
-          </p>
-          <div class="cta">
-            <a class="button" href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener" data-i18n="cta_open">Open simulator</a>
-            <a class="button ghost" href="../" data-i18n="cta_back">Back to LASME</a>
+        <div class="hero-intro">
+          <img class="hero-logo" src="../images/Logo%20Engrenarium.png" alt="Engrenarium logo" loading="lazy" decoding="async" />
+          <div>
+            <h2 data-i18n="hero_title">Engrenarium</h2>
+            <p data-i18n="hero_text">
+              Engrenarium is a LASME project focused on the simulation and visualization of planetary gear systems in a web environment.
+            </p>
           </div>
         </div>
 
         <div class="card highlight">
           <img class="highlight-logo" src="../images/Logo%20Engrenarium.png" alt="Engrenarium logo" loading="lazy" decoding="async" />
           <div class="highlight-body">
-            <h3 data-i18n="highlight_title">Summary</h3>
+            <h3 data-i18n="highlight_title">Online preview</h3>
             <p class="muted" data-i18n="highlight_text">
-              A tool under development to support teaching activities, demonstrations, and exploration of mechanical configurations.
+              Engrenarium includes an online version with basic features so you can preview the interface and core behavior before using the full software.
             </p>
+            <div class="actions">
+              <a class="button small" href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener" data-i18n="cta_open">Open simulator</a>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section section-divider download-section">
+      <div class="container">
+        <h2 data-i18n="download_title">Download</h2>
+        <p class="muted" data-i18n="download_info">Current version: 1.2.1. Package available for Windows x64.</p>
+        <div class="actions">
+          <a class="button" href="./Engrenarium_x64-setup.zip" download="Engrenarium_x64-setup.zip" data-i18n="download_cta">Download</a>
         </div>
       </div>
     </section>
@@ -79,12 +90,16 @@
     <section id="sobre" class="section">
       <div class="container">
         <h2 data-i18n="about_title">About the project</h2>
-        <p data-i18n="about_text">
-          This page presents an initial overview of Engrenarium. The goal is to gather information about the project proposal, its context within LASME, and the materials that will be published later.
-        </p>
-        <div class="actions">
-          <a class="button" href="./Engrenarium_x64-setup.zip" download="Engrenarium_x64-setup.zip" data-i18n="download_cta">Download</a>
-        </div>
+        <ul class="list project-list">
+          <li><strong data-i18n="about_1_title">Teaching planetary gear systems</strong> <span data-i18n="about_1_text">Allows visual demonstration of operating principles and kinematic relationships in planetary systems.</span></li>
+          <li><strong data-i18n="about_2_title">Visualization of complex mechanisms</strong> <span data-i18n="about_2_text">Makes it easier to understand the interaction between sun, planets, and ring gear in different configurations.</span></li>
+          <li><strong data-i18n="about_3_title">Exploration of design configurations</strong> <span data-i18n="about_3_text">Makes it possible to quickly test different gear arrangements and parameters.</span></li>
+          <li><strong data-i18n="about_4_title">Preliminary transmission analysis</strong> <span data-i18n="about_4_text">Helps with the initial evaluation of planetary transmission architectures.</span></li>
+          <li><strong data-i18n="about_5_title">Simulation of multiple planetary stages</strong> <span data-i18n="about_5_text">Allows the study of systems with several planetary sets in series.</span></li>
+          <li><strong data-i18n="about_6_title">Generation of models and technical files</strong> <span data-i18n="about_6_text">Allows exporting geometric representations for use in documentation or other software.</span></li>
+          <li><strong data-i18n="about_7_title">Research support tool</strong> <span data-i18n="about_7_text">Can be used in the investigation and analysis of gear configurations in academic projects.</span></li>
+          <li><strong data-i18n="about_8_title">Support for documenting laboratory projects</strong> <span data-i18n="about_8_text">Helps record and illustrate mechanisms studied in technical and academic activities.</span></li>
+        </ul>
       </div>
     </section>
 
@@ -98,25 +113,25 @@
 
         <div class="screenshot-grid">
           <figure class="card screenshot-card">
-            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%201.png" data-caption-key="screenshots_caption_1">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%201.png">
               <img src="./Figs/Fig%201.png" alt="Engrenarium screenshot 1" loading="lazy" decoding="async" />
             </button>
           </figure>
 
           <figure class="card screenshot-card">
-            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%202.png" data-caption-key="screenshots_caption_2">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%202.png">
               <img src="./Figs/Fig%202.png" alt="Engrenarium screenshot 2" loading="lazy" decoding="async" />
             </button>
           </figure>
 
           <figure class="card screenshot-card">
-            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%203.png" data-caption-key="screenshots_caption_3">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%203.png">
               <img src="./Figs/Fig%203.png" alt="Engrenarium screenshot 3" loading="lazy" decoding="async" />
             </button>
           </figure>
 
           <figure class="card screenshot-card">
-            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%204.png" data-caption-key="screenshots_caption_4">
+            <button class="screenshot-frame" type="button" data-screenshot="./Figs/Fig%204.png">
               <img src="./Figs/Fig%204.png" alt="Engrenarium screenshot 4" loading="lazy" decoding="async" />
             </button>
           </figure>
@@ -149,6 +164,7 @@
           </ul>
         </div>
         <p class="note" data-i18n="pricing_note">All license prices below are listed in US dollars and grant perpetual access.</p>
+        <p class="pricing-highlight" data-lang-block="pt" hidden>Para brasileiros, entre em contato para descontos na compra de licenças.</p>
 
         <div class="pricing-grid">
           <article class="card price-card">
@@ -201,61 +217,13 @@
             </div>
           </article>
         </div>
-
-        <p class="note" data-lang-block="pt" hidden>Para brasileiros, entre em contato para descontos na compra de licenças.</p>
-
-        <div class="actions">
-          <a class="button ghost" href="mailto:arturavelar@ufsj.edu.br" data-i18n="pricing_cta">Contact for licensing</a>
-        </div>
       </div>
     </section>
 
-    <section id="aplicacoes" class="section alt">
+    <section class="section">
       <div class="container">
-        <h2 data-i18n="applications_title">Initial applications</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3 data-i18n="app_1_title">Teaching</h3>
-            <p class="muted" data-i18n="app_1_text">
-              Support for classes and demonstrations about kinematic relations, gear configurations, and the behavior of planetary systems.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 data-i18n="app_2_title">Exploration</h3>
-            <p class="muted" data-i18n="app_2_text">
-              A space to test different arrangements and visually observe how the components relate inside the mechanism.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 data-i18n="app_3_title">Documentation</h3>
-            <p class="muted" data-i18n="app_3_text">
-              A base to consolidate project descriptions, usage references, and supporting materials produced by the laboratory.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="proximos-passos" class="section">
-      <div class="container">
-        <h2 data-i18n="next_title">Next steps</h2>
-        <div class="grid-2">
-          <article class="card">
-            <h3 data-i18n="next_1_title">Content</h3>
-            <p class="muted" data-i18n="next_1_text">
-              Add more detailed descriptions, screenshots, use cases, and guidance for courses and outreach activities.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 data-i18n="next_2_title">Integration</h3>
-            <p class="muted" data-i18n="next_2_text">
-              Connect this page to future publications, research results, and simulator updates as the project evolves.
-            </p>
-          </article>
-        </div>
+        <h2 data-i18n="pricing_contact_title">Contact</h2>
+        <p class="muted"><a href="mailto:arturavelar@ufsj.edu.br">arturavelar@ufsj.edu.br</a></p>
       </div>
     </section>
 
@@ -280,7 +248,6 @@
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot preview" data-i18n-aria-label="lightbox_label">
       <button class="lightbox-close" type="button" aria-label="Close preview" data-i18n-aria-label="lightbox_close">×</button>
       <img class="lightbox-image" alt="" />
-      <p class="lightbox-caption muted"></p>
     </div>
   </div>
 
@@ -295,11 +262,10 @@
         kicker: "Universidade Federal de São João del-Rei — UFSJ",
         subtitle: "Laboratório de Sistemas Mecânicos",
         nav_home: "Início",
+        nav_download: "Download",
         nav_about: "Sobre o projeto",
         nav_screenshots: "Screenshots",
         nav_pricing: "Licenças",
-        nav_applications: "Aplicações",
-        nav_next: "Próximos passos",
         nav_label: "Navegação",
         controls_label: "Controles",
         language_label: "Idioma",
@@ -309,19 +275,31 @@
         hero_title: "Engrenarium",
         hero_text: "O Engrenarium é um projeto do LASME voltado à simulação e visualização de sistemas de engrenagens planetárias em ambiente web.",
         cta_open: "Abrir simulador",
-        cta_back: "Voltar ao LASME",
-        highlight_title: "Resumo",
-        highlight_text: "Ferramenta em desenvolvimento para apoiar atividades didáticas, demonstrações e exploração de configurações mecânicas.",
+        highlight_title: "Preview online",
+        highlight_text: "O Engrenarium inclui uma versão online com recursos básicos para que você possa visualizar a interface e o comportamento principal antes de usar o software completo.",
         about_title: "Sobre o projeto",
-        about_text: "Esta página apresenta uma visão geral inicial do Engrenarium. O objetivo é reunir informações sobre a proposta do projeto, seu contexto no LASME e os materiais que serão publicados futuramente.",
+        about_1_title: "Ensino de sistemas de engrenagens planetárias",
+        about_1_text: "Permite demonstrar visualmente princípios de funcionamento e relações cinemáticas em sistemas planetários.",
+        about_2_title: "Visualização de mecanismos complexos",
+        about_2_text: "Facilita a compreensão da interação entre sol, planetas e coroa em diferentes configurações.",
+        about_3_title: "Exploração de configurações de projeto",
+        about_3_text: "Possibilita testar rapidamente diferentes arranjos e parâmetros de engrenagens.",
+        about_4_title: "Análise preliminar de transmissões",
+        about_4_text: "Auxilia na avaliação inicial de arquiteturas de transmissões planetárias.",
+        about_5_title: "Simulação de múltiplos estágios planetários",
+        about_5_text: "Permite estudar sistemas com vários conjuntos planetários em série.",
+        about_6_title: "Geração de modelos e arquivos técnicos",
+        about_6_text: "Permite exportar representações geométricas para uso em documentação ou outros softwares.",
+        about_7_title: "Ferramenta de apoio à pesquisa",
+        about_7_text: "Pode ser utilizada na investigação e análise de configurações de engrenagens em projetos acadêmicos.",
+        about_8_title: "Apoio à documentação de projetos do laboratório",
+        about_8_text: "Ajuda a registrar e ilustrar mecanismos estudados em atividades técnicas e acadêmicas.",
+        download_title: "Download",
+        download_info: "Versão atual: 1.2.1. Pacote disponível para Windows x64.",
         download_cta: "Download",
         screenshots_eyebrow: "Prévia",
         screenshots_title: "Screenshots",
         screenshots_intro: "Uma prévia visual rápida da interface do Engrenarium, mostrando vistas e fluxos de trabalho atualmente disponíveis no projeto.",
-        screenshots_caption_1: "Screenshot 1",
-        screenshots_caption_2: "Screenshot 2",
-        screenshots_caption_3: "Screenshot 3",
-        screenshots_caption_4: "Screenshot 4",
         lightbox_label: "Visualização ampliada da imagem",
         lightbox_close: "Fechar visualização",
         pricing_eyebrow: "Licenciamento",
@@ -349,19 +327,7 @@
         pricing_4_text: "Licença perpétua válida para até 25 computadores diferentes.",
         pricing_5_title: "Institucional - 50 computadores",
         pricing_5_text: "Licença perpétua válida para até 50 computadores diferentes.",
-        pricing_cta: "Entrar em contato sobre licenças",
-        applications_title: "Aplicações iniciais",
-        app_1_title: "Ensino",
-        app_1_text: "Apoio a aulas e demonstrações sobre relações cinemáticas, configurações de engrenagens e comportamento de sistemas planetários.",
-        app_2_title: "Exploração",
-        app_2_text: "Espaço para testar diferentes arranjos e observar de forma visual como os componentes se relacionam dentro do mecanismo.",
-        app_3_title: "Documentação",
-        app_3_text: "Base para consolidar descrições do projeto, referências de uso e materiais de apoio produzidos pelo laboratório.",
-        next_title: "Próximos passos",
-        next_1_title: "Conteúdo",
-        next_1_text: "Inserir descrições mais detalhadas, capturas de tela, exemplos de uso e orientações para disciplinas e atividades de extensão.",
-        next_2_title: "Integração",
-        next_2_text: "Conectar esta página a futuras publicações, resultados de pesquisa e atualizações do simulador conforme o projeto evoluir.",
+        pricing_contact_title: "Contato",
         legal_eyebrow: "Legal",
         legal_title: "Termos, privacidade e reembolsos",
         terms_notice: "Ao adquirir, baixar ou utilizar o Engrenarium, você concorda com os Termos de Serviço, a Política de Privacidade e a Política de Reembolso.",
@@ -376,11 +342,10 @@
         kicker: "Federal University of São João del-Rei — UFSJ",
         subtitle: "Laboratory of Mechanical Systems",
         nav_home: "Home",
+        nav_download: "Download",
         nav_about: "About the project",
         nav_screenshots: "Screenshots",
         nav_pricing: "Pricing",
-        nav_applications: "Applications",
-        nav_next: "Next steps",
         nav_label: "Navigation",
         controls_label: "Controls",
         language_label: "Language",
@@ -390,19 +355,31 @@
         hero_title: "Engrenarium",
         hero_text: "Engrenarium is a LASME project focused on the simulation and visualization of planetary gear systems in a web environment.",
         cta_open: "Open simulator",
-        cta_back: "Back to LASME",
-        highlight_title: "Summary",
-        highlight_text: "A tool under development to support teaching activities, demonstrations, and exploration of mechanical configurations.",
+        highlight_title: "Online preview",
+        highlight_text: "Engrenarium includes an online version with basic features so you can preview the interface and core behavior before using the full software.",
         about_title: "About the project",
-        about_text: "This page presents an initial overview of Engrenarium. The goal is to gather information about the project proposal, its context within LASME, and the materials that will be published later.",
+        about_1_title: "Teaching planetary gear systems",
+        about_1_text: "Allows visual demonstration of operating principles and kinematic relationships in planetary systems.",
+        about_2_title: "Visualization of complex mechanisms",
+        about_2_text: "Makes it easier to understand the interaction between sun, planets, and ring gear in different configurations.",
+        about_3_title: "Exploration of design configurations",
+        about_3_text: "Makes it possible to quickly test different gear arrangements and parameters.",
+        about_4_title: "Preliminary transmission analysis",
+        about_4_text: "Helps with the initial evaluation of planetary transmission architectures.",
+        about_5_title: "Simulation of multiple planetary stages",
+        about_5_text: "Allows the study of systems with several planetary sets in series.",
+        about_6_title: "Generation of models and technical files",
+        about_6_text: "Allows exporting geometric representations for use in documentation or other software.",
+        about_7_title: "Research support tool",
+        about_7_text: "Can be used in the investigation and analysis of gear configurations in academic projects.",
+        about_8_title: "Support for documenting laboratory projects",
+        about_8_text: "Helps record and illustrate mechanisms studied in technical and academic activities.",
+        download_title: "Download",
+        download_info: "Current version: 1.2.1. Package available for Windows x64.",
         download_cta: "Download",
         screenshots_eyebrow: "Preview",
         screenshots_title: "Screenshots",
         screenshots_intro: "A quick visual preview of the Engrenarium interface, showing views and workflows currently available in the project.",
-        screenshots_caption_1: "Screenshot 1",
-        screenshots_caption_2: "Screenshot 2",
-        screenshots_caption_3: "Screenshot 3",
-        screenshots_caption_4: "Screenshot 4",
         lightbox_label: "Expanded image preview",
         lightbox_close: "Close preview",
         pricing_eyebrow: "Licensing",
@@ -430,19 +407,7 @@
         pricing_4_text: "Perpetual license valid for up to 25 different computers.",
         pricing_5_title: "Institutional - 50 computers",
         pricing_5_text: "Perpetual license valid for up to 50 different computers.",
-        pricing_cta: "Contact for licensing",
-        applications_title: "Initial applications",
-        app_1_title: "Teaching",
-        app_1_text: "Support for classes and demonstrations about kinematic relations, gear configurations, and the behavior of planetary systems.",
-        app_2_title: "Exploration",
-        app_2_text: "A space to test different arrangements and visually observe how the components relate inside the mechanism.",
-        app_3_title: "Documentation",
-        app_3_text: "A base to consolidate project descriptions, usage references, and supporting materials produced by the laboratory.",
-        next_title: "Next steps",
-        next_1_title: "Content",
-        next_1_text: "Add more detailed descriptions, screenshots, use cases, and guidance for courses and outreach activities.",
-        next_2_title: "Integration",
-        next_2_text: "Connect this page to future publications, research results, and simulator updates as the project evolves.",
+        pricing_contact_title: "Contact",
         legal_eyebrow: "Legal",
         legal_title: "Terms, privacy, and refunds",
         terms_notice: "By purchasing, downloading, or using Engrenarium, you agree to the Terms of Service, Privacy Policy, and Refund Policy.",
@@ -499,10 +464,6 @@
 
       const lightbox = document.querySelector(".lightbox");
       if (lightbox && !lightbox.hidden) {
-        const captionKey = lightbox.dataset.captionKey;
-        if (captionKey && dict[captionKey]) {
-          lightbox.querySelector(".lightbox-caption").textContent = dict[captionKey];
-        }
       }
     }
 
@@ -519,13 +480,11 @@
     document.addEventListener("DOMContentLoaded", () => {
       const lightbox = document.querySelector(".lightbox");
       const lightboxImage = lightbox.querySelector(".lightbox-image");
-      const lightboxCaption = lightbox.querySelector(".lightbox-caption");
       const closeLightbox = () => {
         lightbox.hidden = true;
         lightbox.setAttribute("aria-hidden", "true");
         lightboxImage.removeAttribute("src");
         lightboxImage.alt = "";
-        lightbox.dataset.captionKey = "";
         document.body.classList.remove("lightbox-open");
       };
 
@@ -533,12 +492,8 @@
         btn.addEventListener("click", () => {
           const src = btn.getAttribute("data-screenshot");
           const img = btn.querySelector("img");
-          const captionKey = btn.getAttribute("data-caption-key");
-          const dict = I18N[currentLang] || I18N.en;
           lightboxImage.src = src;
           lightboxImage.alt = img ? img.alt : "";
-          lightboxCaption.textContent = (captionKey && dict[captionKey]) ? dict[captionKey] : "";
-          lightbox.dataset.captionKey = captionKey || "";
           lightbox.hidden = false;
           lightbox.setAttribute("aria-hidden", "false");
           document.body.classList.add("lightbox-open");
