@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engrenarium | LASME</title>
-  <meta name="description" content="Página do projeto Engrenarium no site do LASME." />
-  <meta property="og:title" content="Engrenarium | LASME" />
-  <meta property="og:description" content="Projeto Engrenarium: simulador interativo de engrenagens planetárias." />
+  <title data-i18n-text="meta_title">Engrenarium | LASME</title>
+  <meta name="description" data-i18n-content="meta_description" content="Engrenarium project page on the LASME website." />
+  <meta property="og:title" data-i18n-content="meta_og_title" content="Engrenarium | LASME" />
+  <meta property="og:description" data-i18n-content="meta_og_description" content="Engrenarium project: interactive planetary gear simulator." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://barbudenge.github.io/LasmeUFSJ/Engrenarium/" />
 
@@ -14,35 +14,35 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
+  <a class="skip-link" href="#conteudo" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-grid">
       <div class="brand">
         <img class="logo" src="../assets/logo.png" alt="LASME" />
         <div class="brand-text">
-          <p class="kicker" data-i18n="kicker">Universidade Federal de São João del-Rei — UFSJ</p>
+          <p class="kicker" data-i18n="kicker">Federal University of São João del-Rei — UFSJ</p>
           <h1>LASME</h1>
-          <p class="subtitle" data-i18n="subtitle">Laboratório de Sistemas Mecânicos</p>
+          <p class="subtitle" data-i18n="subtitle">Laboratory of Mechanical Systems</p>
         </div>
       </div>
 
-      <nav class="nav" aria-label="Navegação">
-        <a href="../" data-i18n="nav_home">Início</a>
-        <a href="#sobre" data-i18n="nav_about">Sobre o projeto</a>
-        <a href="#aplicacoes" data-i18n="nav_applications">Aplicações</a>
-        <a href="#proximos-passos" data-i18n="nav_next">Próximos passos</a>
+      <nav class="nav" aria-label="Navigation" data-i18n-aria-label="nav_label">
+        <a href="../" data-i18n="nav_home">Home</a>
+        <a href="#sobre" data-i18n="nav_about">About the project</a>
+        <a href="#aplicacoes" data-i18n="nav_applications">Applications</a>
+        <a href="#proximos-passos" data-i18n="nav_next">Next steps</a>
       </nav>
 
-      <div class="toolbar" aria-label="Controles">
-        <div class="pill" role="group" aria-label="Idioma">
-          <button class="pill-btn" type="button" data-lang="pt" aria-pressed="true">PT</button>
-          <button class="pill-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      <div class="toolbar" aria-label="Controls" data-i18n-aria-label="controls_label">
+        <div class="pill" role="group" aria-label="Language" data-i18n-aria-label="language_label">
+          <button class="pill-btn" type="button" data-lang="pt" aria-pressed="false">PT</button>
+          <button class="pill-btn active" type="button" data-lang="en" aria-pressed="true">EN</button>
         </div>
 
-        <div class="pill" role="group" aria-label="Tema">
-          <button class="pill-icon" type="button" data-theme="dark" aria-label="Modo escuro" title="Modo escuro">🌙</button>
-          <button class="pill-icon" type="button" data-theme="light" aria-label="Modo claro" title="Modo claro">☀️</button>
+        <div class="pill" role="group" aria-label="Theme" data-i18n-aria-label="theme_label">
+          <button class="pill-icon" type="button" data-theme="dark" aria-label="Dark mode" data-i18n-aria-label="dark_mode" title="Dark mode" data-i18n-title="dark_mode">🌙</button>
+          <button class="pill-icon" type="button" data-theme="light" aria-label="Light mode" data-i18n-aria-label="light_mode" title="Light mode" data-i18n-title="light_mode">☀️</button>
         </div>
       </div>
     </div>
@@ -54,20 +54,20 @@
         <div>
           <h2 data-i18n="hero_title">Engrenarium</h2>
           <p data-i18n="hero_text">
-            O Engrenarium e um projeto do LASME voltado a simulacao e visualizacao de sistemas de engrenagens planetarias em ambiente web.
+            Engrenarium is a LASME project focused on the simulation and visualization of planetary gear systems in a web environment.
           </p>
           <div class="cta">
-            <a class="button" href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener" data-i18n="cta_open">Abrir simulador</a>
-            <a class="button ghost" href="../" data-i18n="cta_back">Voltar ao LASME</a>
+            <a class="button" href="https://barbudenge.github.io/engrenarium/" target="_blank" rel="noopener" data-i18n="cta_open">Open simulator</a>
+            <a class="button ghost" href="../" data-i18n="cta_back">Back to LASME</a>
           </div>
         </div>
 
         <div class="card highlight">
-          <img class="highlight-logo" src="../images/Logo%20Engrenarium.png" alt="Logo do Engrenarium" loading="lazy" decoding="async" />
+          <img class="highlight-logo" src="../images/Logo%20Engrenarium.png" alt="Engrenarium logo" loading="lazy" decoding="async" />
           <div class="highlight-body">
-            <h3 data-i18n="highlight_title">Resumo</h3>
+            <h3 data-i18n="highlight_title">Summary</h3>
             <p class="muted" data-i18n="highlight_text">
-              Ferramenta em desenvolvimento para apoiar atividades didaticas, demonstracoes e exploracao de configuracoes mecanicas.
+              A tool under development to support teaching activities, demonstrations, and exploration of mechanical configurations.
             </p>
           </div>
         </div>
@@ -76,9 +76,9 @@
 
     <section id="sobre" class="section">
       <div class="container">
-        <h2 data-i18n="about_title">Sobre o projeto</h2>
+        <h2 data-i18n="about_title">About the project</h2>
         <p data-i18n="about_text">
-          Esta pagina apresenta uma visao geral inicial do Engrenarium. O objetivo e reunir informacoes sobre a proposta do projeto, seu contexto no LASME e os materiais que serao publicados futuramente.
+          This page presents an initial overview of Engrenarium. The goal is to gather information about the project proposal, its context within LASME, and the materials that will be published later.
         </p>
         <div class="actions">
           <a class="button" href="./Engrenarium_x64-setup.zip" download="Engrenarium_x64-setup.zip" data-i18n="download_cta">Download</a>
@@ -88,26 +88,26 @@
 
     <section id="aplicacoes" class="section alt">
       <div class="container">
-        <h2 data-i18n="applications_title">Aplicacoes iniciais</h2>
+        <h2 data-i18n="applications_title">Initial applications</h2>
         <div class="grid-3">
           <article class="card">
-            <h3 data-i18n="app_1_title">Ensino</h3>
+            <h3 data-i18n="app_1_title">Teaching</h3>
             <p class="muted" data-i18n="app_1_text">
-              Apoio a aulas e demonstracoes sobre relacoes cinematicas, configuracoes de engrenagens e comportamento de sistemas planetarios.
+              Support for classes and demonstrations about kinematic relations, gear configurations, and the behavior of planetary systems.
             </p>
           </article>
 
           <article class="card">
-            <h3 data-i18n="app_2_title">Exploracao</h3>
+            <h3 data-i18n="app_2_title">Exploration</h3>
             <p class="muted" data-i18n="app_2_text">
-              Espaco para testar diferentes arranjos e observar de forma visual como os componentes se relacionam dentro do mecanismo.
+              A space to test different arrangements and visually observe how the components relate inside the mechanism.
             </p>
           </article>
 
           <article class="card">
-            <h3 data-i18n="app_3_title">Documentacao</h3>
+            <h3 data-i18n="app_3_title">Documentation</h3>
             <p class="muted" data-i18n="app_3_text">
-              Base para consolidar descricoes do projeto, referencias de uso e materiais de apoio produzidos pelo laboratorio.
+              A base to consolidate project descriptions, usage references, and supporting materials produced by the laboratory.
             </p>
           </article>
         </div>
@@ -116,21 +116,36 @@
 
     <section id="proximos-passos" class="section">
       <div class="container">
-        <h2 data-i18n="next_title">Proximos passos</h2>
+        <h2 data-i18n="next_title">Next steps</h2>
         <div class="grid-2">
           <article class="card">
-            <h3 data-i18n="next_1_title">Conteudo</h3>
+            <h3 data-i18n="next_1_title">Content</h3>
             <p class="muted" data-i18n="next_1_text">
-              Inserir descricoes mais detalhadas, capturas de tela, exemplos de uso e orientacoes para disciplinas e atividades de extensao.
+              Add more detailed descriptions, screenshots, use cases, and guidance for courses and outreach activities.
             </p>
           </article>
 
           <article class="card">
-            <h3 data-i18n="next_2_title">Integracao</h3>
+            <h3 data-i18n="next_2_title">Integration</h3>
             <p class="muted" data-i18n="next_2_text">
-              Conectar esta pagina a futuras publicacoes, resultados de pesquisa e atualizacoes do simulador conforme o projeto evoluir.
+              Connect this page to future publications, research results, and simulator updates as the project evolves.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="card legal-cta">
+          <p class="eyebrow" data-i18n="legal_eyebrow">Legal</p>
+          <h2 data-i18n="legal_title">Terms, privacy, and refunds</h2>
+          <p class="muted" data-i18n="terms_notice">
+            By purchasing, downloading, or using Engrenarium, you agree to the Terms of Service, Privacy Policy, and Refund Policy.
+          </p>
+          <div class="actions">
+            <a class="button ghost" href="./terms-of-service/" data-i18n="terms_link">Read the Terms of Service</a>
+          </div>
         </div>
       </div>
     </section>
@@ -139,6 +154,10 @@
   <script>
     const I18N = {
       pt: {
+        meta_title: "Engrenarium | LASME",
+        meta_description: "Página do projeto Engrenarium no site do LASME.",
+        meta_og_title: "Engrenarium | LASME",
+        meta_og_description: "Projeto Engrenarium: simulador interativo de engrenagens planetárias.",
         skip: "Ir para o conteúdo",
         kicker: "Universidade Federal de São João del-Rei — UFSJ",
         subtitle: "Laboratório de Sistemas Mecânicos",
@@ -146,6 +165,12 @@
         nav_about: "Sobre o projeto",
         nav_applications: "Aplicações",
         nav_next: "Próximos passos",
+        nav_label: "Navegação",
+        controls_label: "Controles",
+        language_label: "Idioma",
+        theme_label: "Tema",
+        dark_mode: "Modo escuro",
+        light_mode: "Modo claro",
         hero_title: "Engrenarium",
         hero_text: "O Engrenarium e um projeto do LASME voltado a simulacao e visualizacao de sistemas de engrenagens planetarias em ambiente web.",
         cta_open: "Abrir simulador",
@@ -166,9 +191,17 @@
         next_1_title: "Conteudo",
         next_1_text: "Inserir descricoes mais detalhadas, capturas de tela, exemplos de uso e orientacoes para disciplinas e atividades de extensao.",
         next_2_title: "Integracao",
-        next_2_text: "Conectar esta pagina a futuras publicacoes, resultados de pesquisa e atualizacoes do simulador conforme o projeto evoluir."
+        next_2_text: "Conectar esta pagina a futuras publicacoes, resultados de pesquisa e atualizacoes do simulador conforme o projeto evoluir.",
+        legal_eyebrow: "Legal",
+        legal_title: "Termos, privacidade e reembolsos",
+        terms_notice: "Ao adquirir, baixar ou utilizar o Engrenarium, voce concorda com os Termos de Servico, a Politica de Privacidade e a Politica de Reembolso.",
+        terms_link: "Ler Termos de Servico"
       },
       en: {
+        meta_title: "Engrenarium | LASME",
+        meta_description: "Engrenarium project page on the LASME website.",
+        meta_og_title: "Engrenarium | LASME",
+        meta_og_description: "Engrenarium project: interactive planetary gear simulator.",
         skip: "Skip to content",
         kicker: "Federal University of São João del-Rei — UFSJ",
         subtitle: "Laboratory of Mechanical Systems",
@@ -176,6 +209,12 @@
         nav_about: "About the project",
         nav_applications: "Applications",
         nav_next: "Next steps",
+        nav_label: "Navigation",
+        controls_label: "Controls",
+        language_label: "Language",
+        theme_label: "Theme",
+        dark_mode: "Dark mode",
+        light_mode: "Light mode",
         hero_title: "Engrenarium",
         hero_text: "Engrenarium is a LASME project focused on the simulation and visualization of planetary gear systems in a web environment.",
         cta_open: "Open simulator",
@@ -196,20 +235,46 @@
         next_1_title: "Content",
         next_1_text: "Add more detailed descriptions, screenshots, use cases, and guidance for courses and outreach activities.",
         next_2_title: "Integration",
-        next_2_text: "Connect this page to future publications, research results, and simulator updates as the project evolves."
+        next_2_text: "Connect this page to future publications, research results, and simulator updates as the project evolves.",
+        legal_eyebrow: "Legal",
+        legal_title: "Terms, privacy, and refunds",
+        terms_notice: "By purchasing, downloading, or using Engrenarium, you agree to the Terms of Service, Privacy Policy, and Refund Policy.",
+        terms_link: "Read the Terms of Service"
       }
     };
 
     const root = document.documentElement;
+    const LANG_STORAGE_KEY = "lasme_lang_v2";
+    const THEME_STORAGE_KEY = "lasme_theme";
 
     function applyLang(lang) {
-      const dict = I18N[lang] || I18N.pt;
+      const dict = I18N[lang] || I18N.en;
       root.lang = (lang === "en") ? "en" : "pt-BR";
-      localStorage.setItem("lasme_lang", lang);
+      localStorage.setItem(LANG_STORAGE_KEY, lang);
 
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (key && dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll("[data-i18n-text]").forEach(el => {
+        const key = el.getAttribute("data-i18n-text");
+        if (key && dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll("[data-i18n-content]").forEach(el => {
+        const key = el.getAttribute("data-i18n-content");
+        if (key && dict[key]) el.setAttribute("content", dict[key]);
+      });
+
+      document.querySelectorAll("[data-i18n-aria-label]").forEach(el => {
+        const key = el.getAttribute("data-i18n-aria-label");
+        if (key && dict[key]) el.setAttribute("aria-label", dict[key]);
+      });
+
+      document.querySelectorAll("[data-i18n-title]").forEach(el => {
+        const key = el.getAttribute("data-i18n-title");
+        if (key && dict[key]) el.setAttribute("title", dict[key]);
       });
 
       document.querySelectorAll("button[data-lang]").forEach(btn => {
@@ -222,7 +287,7 @@
     function applyTheme(theme) {
       const t = (theme === "light") ? "light" : "dark";
       root.setAttribute("data-theme", t);
-      localStorage.setItem("lasme_theme", t);
+      localStorage.setItem(THEME_STORAGE_KEY, t);
 
       document.querySelectorAll("button[data-theme]").forEach(btn => {
         btn.classList.toggle("active", btn.dataset.theme === t);
@@ -237,8 +302,8 @@
         btn.addEventListener("click", () => applyTheme(btn.dataset.theme));
       });
 
-      applyLang(localStorage.getItem("lasme_lang") || "pt");
-      applyTheme(localStorage.getItem("lasme_theme") || "light");
+      applyLang(localStorage.getItem(LANG_STORAGE_KEY) || "en");
+      applyTheme(localStorage.getItem(THEME_STORAGE_KEY) || "light");
     });
   </script>
 </body>

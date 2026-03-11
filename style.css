@@ -348,6 +348,110 @@ h3{
   border-top: 1px solid var(--border);
 }
 
+.eyebrow{
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legal-cta p{
+  max-width: 72ch;
+}
+
+.legal-layout{
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.legal-toc{
+  position: sticky;
+  top: 92px;
+}
+
+.legal-toc nav{
+  display: grid;
+  gap: 8px;
+}
+
+.legal-toc a{
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: var(--muted);
+}
+
+.legal-toc a:hover{
+  color: var(--text);
+  border-color: var(--border);
+  background: var(--panel-2);
+  text-decoration: none;
+}
+
+.legal-stack{
+  display: grid;
+  gap: 18px;
+}
+
+.legal-meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.legal-badge{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--chip-border);
+  background: var(--chip);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.legal-section{
+  scroll-margin-top: 92px;
+}
+
+.legal-section h3{
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.legal-section h4{
+  margin: 20px 0 10px;
+  font-size: 14px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legal-section p{
+  margin: 0 0 12px;
+}
+
+.legal-section ul{
+  margin: 0 0 14px;
+  padding-left: 18px;
+}
+
+.legal-section li{
+  margin: 8px 0;
+}
+
+.legal-contact{
+  display: grid;
+  gap: 4px;
+}
+
 /* =========================
    Responsivo
    ========================= */
@@ -362,5 +466,7 @@ h3{
   .hero-grid{ grid-template-columns: 1fr; }
   .grid-3{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
+  .legal-layout{ grid-template-columns: 1fr; }
+  .legal-toc{ position: static; }
   .hero h2{ font-size: 28px; }
 }
