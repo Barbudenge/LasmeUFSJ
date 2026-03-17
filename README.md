@@ -3,7 +3,7 @@
 O LASME é um laboratório vinculado ao Departamento de Engenharia Mecânica da Universidade Federal de São João del-Rei (UFSJ), dedicado a atividades de ensino, pesquisa e desenvolvimento em sistemas mecânicos, mecanismos, transmissões e ferramentas computacionais de apoio didático.
 
 ## Página do laboratório
-- https://barbudenge.github.io/LasmeUFSJ/
+- https://barbudenge.github.io/lasmeufsj/
 
 ## Linhas de atuação
 - Sistemas mecânicos e elementos de máquinas
