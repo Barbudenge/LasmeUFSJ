@@ -390,46 +390,57 @@ h3{
   max-width: 72ch;
 }
 
-.pricing-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+.pricing-list-card{
   margin-top: 18px;
+  padding: 20px 24px;
 }
 
-.price-card{
-  padding: 0;
-  border-radius: 14px;
-}
-
-.price-head{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 14px;
-  align-items: center;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border);
-}
-
-.price-body{
-  padding: 18px;
-}
-
-.price-kicker{
+.pricing-list{
+  list-style: disc;
   margin: 0;
+  padding-left: 22px;
+}
+
+.pricing-item{
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-item + .pricing-item{
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.pricing-item-main{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 18px;
+  align-items: start;
+}
+
+.pricing-item-label{
+  margin: 0;
+}
+
+.pricing-item-title{
+  display: block;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0;
-  text-transform: none;
   color: var(--text);
 }
 
-.price-value{
+.pricing-item-price{
   margin: 0;
   font-size: 18px;
-  line-height: 1;
-  font-weight: 600;
+  line-height: 1.2;
+  font-weight: 700;
   white-space: nowrap;
+}
+
+.pricing-item-text{
+  display: block;
+  margin-top: 4px;
 }
 
 .pro-features{
