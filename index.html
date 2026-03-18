@@ -281,6 +281,15 @@
   const LANG_STORAGE_KEY = "lasme_lang_v2";
   const THEME_STORAGE_KEY = "lasme_theme";
 
+  function syncHeaderHeight() {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    requestAnimationFrame(() => {
+      root.style.setProperty("--header-h", `${Math.ceil(header.getBoundingClientRect().height)}px`);
+    });
+  }
+
   function applyLang(lang) {
     const dict = I18N[lang] || I18N.en;
     root.lang = (lang === "en") ? "en" : "pt-BR";
@@ -316,6 +325,8 @@
       btn.classList.toggle("active", on);
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
+
+    syncHeaderHeight();
   }
 
   function applyTheme(theme) {
@@ -326,9 +337,13 @@
     document.querySelectorAll("button[data-theme]").forEach(btn => {
       btn.classList.toggle("active", btn.dataset.theme === t);
     });
+
+    syncHeaderHeight();
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".site-header");
+
     document.querySelectorAll("button[data-lang]").forEach(btn => {
       btn.addEventListener("click", () => applyLang(btn.dataset.lang));
     });
@@ -338,5 +353,12 @@
 
     applyLang(localStorage.getItem(LANG_STORAGE_KEY) || "en");
     applyTheme(localStorage.getItem(THEME_STORAGE_KEY) || "light");
+
+    syncHeaderHeight();
+    window.addEventListener("resize", syncHeaderHeight);
+
+    if ("ResizeObserver" in window && header) {
+      new ResizeObserver(syncHeaderHeight).observe(header);
+    }
   });
 </script>

@@ -237,6 +237,11 @@ a:hover{ text-decoration: underline; }
   padding: 34px 0;
 }
 
+section[id],
+.legal-section{
+  scroll-margin-top: calc(var(--header-h) + 4px);
+}
+
 .section-divider{
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -570,7 +575,7 @@ h3{
 
 .legal-toc{
   position: sticky;
-  top: 92px;
+  top: calc(var(--header-h) + 4px);
 }
 
 .legal-toc nav{
@@ -615,10 +620,6 @@ h3{
   color: var(--muted);
   font-size: 13px;
   font-weight: 600;
-}
-
-.legal-section{
-  scroll-margin-top: 92px;
 }
 
 .legal-section h3{

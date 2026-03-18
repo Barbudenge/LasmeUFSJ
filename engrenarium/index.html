@@ -149,9 +149,11 @@
         </p>
         <div class="card pro-features">
           <h3 data-i18n="pro_title">What the Pro version adds</h3>
+          <!--
           <p class="muted" data-i18n="pro_intro">
             The PRO version of Engrenarium provides access to advanced features that extend the capabilities of the software beyond those available in the Free version. These features include:
           </p>
+          -->
           <ul class="list pro-list">
             <li data-i18n="pro_feature_1">Export of 3D models in STL and DXF formats.</li>
             <li data-i18n="pro_feature_2">Export of simulation videos in AVI and WebM formats.</li>
@@ -425,6 +427,15 @@
     const THEME_STORAGE_KEY = "lasme_theme";
     let currentLang = "en";
 
+    function syncHeaderHeight() {
+      const header = document.querySelector(".site-header");
+      if (!header) return;
+
+      requestAnimationFrame(() => {
+        root.style.setProperty("--header-h", `${Math.ceil(header.getBoundingClientRect().height)}px`);
+      });
+    }
+
     function applyLang(lang) {
       const dict = I18N[lang] || I18N.en;
       currentLang = lang;
@@ -470,6 +481,8 @@
       const lightbox = document.querySelector(".lightbox");
       if (lightbox && !lightbox.hidden) {
       }
+
+      syncHeaderHeight();
     }
 
     function applyTheme(theme) {
@@ -480,9 +493,12 @@
       document.querySelectorAll("button[data-theme]").forEach(btn => {
         btn.classList.toggle("active", btn.dataset.theme === t);
       });
+
+      syncHeaderHeight();
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector(".site-header");
       const lightbox = document.querySelector(".lightbox");
       const lightboxImage = lightbox.querySelector(".lightbox-image");
       const closeLightbox = () => {
@@ -522,6 +538,13 @@
 
       applyLang(localStorage.getItem(LANG_STORAGE_KEY) || "en");
       applyTheme(localStorage.getItem(THEME_STORAGE_KEY) || "light");
+
+      syncHeaderHeight();
+      window.addEventListener("resize", syncHeaderHeight);
+
+      if ("ResizeObserver" in window && header) {
+        new ResizeObserver(syncHeaderHeight).observe(header);
+      }
     });
   </script>
 </body>
